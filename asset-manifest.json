@@ -1,11 +1,12 @@
 {
-  "main.css": "static/css/main.d412f2ae.css",
-  "main.css.map": "static/css/main.d412f2ae.css.map",
-  "main.js": "static/js/main.ffb9f672.js",
-  "main.js.map": "static/js/main.ffb9f672.js.map",
+  "main.css": "static/css/main.4a09c3ab.css",
+  "main.css.map": "static/css/main.4a09c3ab.css.map",
+  "main.js": "static/js/main.bb5a1319.js",
+  "main.js.map": "static/js/main.bb5a1319.js.map",
   "static/media/loading.gif": "static/media/loading.cb43d7c0.gif",
   "static/media/map_marker_icon.png": "static/media/map_marker_icon.29ad6276.png",
   "static/media/not-found-bg.jpg": "static/media/not-found-bg.01b98106.jpg",
+  "static/media/slick.svg": "static/media/slick.f97e3bbf.svg",
   "static/media/susi-white.svg": "static/media/susi-white.67ab81e8.svg",
   "static/media/susi.svg": "static/media/susi.fb9635ab.svg"
 }
