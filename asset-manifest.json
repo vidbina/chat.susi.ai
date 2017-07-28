@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.1bb3ad98.css",
-  "main.css.map": "static/css/main.1bb3ad98.css.map",
-  "main.js": "static/js/main.c888565b.js",
-  "main.js.map": "static/js/main.c888565b.js.map",
+  "main.css": "static/css/main.ba5d54d7.css",
+  "main.css.map": "static/css/main.ba5d54d7.css.map",
+  "main.js": "static/js/main.2124633b.js",
+  "main.js.map": "static/js/main.2124633b.js.map",
   "static/media/all_devices.png": "static/media/all_devices.1b938350.png",
   "static/media/android-mockup.jpg": "static/media/android-mockup.cfe618f4.jpg",
   "static/media/app-store.svg": "static/media/app-store.1cfd5dba.svg",
@@ -21,5 +21,6 @@
   "static/media/susi-test.gif": "static/media/susi-test.87904ab0.gif",
   "static/media/susi-white.svg": "static/media/susi-white.67ab81e8.svg",
   "static/media/susi.gif": "static/media/susi.407734a0.gif",
-  "static/media/susi.svg": "static/media/susi.fb9635ab.svg"
+  "static/media/susi.svg": "static/media/susi.fb9635ab.svg",
+  "static/media/susi_skill.png": "static/media/susi_skill.059ce61f.png"
 }
