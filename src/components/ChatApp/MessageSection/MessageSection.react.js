@@ -865,6 +865,9 @@ class MessageSection extends Component {
                     }
         return (
           <div className={topBackground} style={{background:body}}>
+          <video poster="http://theothernefertiti.com/vids/ghost_1.jpg" id="bgvid" playsInline autoPlay muted loop>
+            <source src="http://theothernefertiti.com/vids/ghost_1.mp4"></source>
+          </video>
             <header className='message-thread-heading'
             style={{ backgroundColor: backgroundCol }}>
               <TopBar

@@ -792,6 +792,13 @@ class Settings extends Component {
 							value='dark'
 							label={<Translate text="Dark" />}
 						/>
+						<RadioButton
+							style={{width: '20%', display: 'inline-block'}}
+							iconStyle={radioIconStyle}
+							labelStyle={{color:themeForegroundColor}}
+							value='nefertiti'
+							label={<Translate text="Nefertiti" />}
+						/>
 					</RadioButtonGroup>
 				</div>
 			)

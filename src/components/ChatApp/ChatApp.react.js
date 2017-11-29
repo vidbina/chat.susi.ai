@@ -1,6 +1,7 @@
 import MessageSection from './MessageSection/MessageSection.react';
 import React, { Component } from 'react';
 import './ChatApp.css';
+import './Themes/Nefertiti.css';
 import history from '../../history';
 
 
