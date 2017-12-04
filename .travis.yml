@@ -17,10 +17,15 @@ cache:
     - node_modules
 
 deploy:
-  provider: s3
-  access_key_id: "$ARTIFACTS_KEY"
-  secret_access_key: "$ARTIFACTS_SECRET"
-  bucket: "$ARTIFACTS_BUCKET"
-  skip_cleanup: true
-  local_dir: build
-  all_branches: true
+  - provider: script
+    script: "./deploy.sh"
+    on:
+      branch: master
+  - provider: s3
+    access_key_id: "$ARTIFACTS_KEY"
+    secret_access_key: "$ARTIFACTS_SECRET"
+    bucket: "$ARTIFACTS_BUCKET"
+    skip_cleanup: true
+    local_dir: build
+    on:
+      branch: theme/nefertiti-setup
