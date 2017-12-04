@@ -22,4 +22,4 @@ cache:
 
 addons:
   artifacts: true
-  working_dir: build
+    working_dir: build
