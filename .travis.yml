@@ -20,6 +20,6 @@ cache:
   directories:
     - node_modules
 
-branches:
-  only:
-    - master
+addons:
+  artifacts: true
+  working_dir: build
