@@ -6,7 +6,7 @@ let ActionTypes = ChatConstants.ActionTypes;
 let CHANGE_EVENT = 'change';
 
 let _defaults = {
-    Theme: 'light',
+    Theme: 'nefertiti',
     Server: 'https://api.susi.ai',
     StandardServer: 'https://api.susi.ai',
     EnterAsSend: true,
