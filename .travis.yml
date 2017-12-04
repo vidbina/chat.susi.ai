@@ -12,14 +12,14 @@ jobs:
     - stage: build
       script: npm run build
 
-deploy:
-  provider: script
-  script: "./deploy.sh"
-
 cache:
   directories:
     - node_modules
 
-addons:
-  artifacts:
-    working_dir: build
+deploy:
+  provider: s3
+  access_key_id: "$ARTIFACTS_KEY"
+  secret_access_key: "$ARTIFACTS_SECRET"
+  bucket: "$ARTIFACTS_BUCKET"
+  skip_cleanup: true
+  local_dir: build
