@@ -18,12 +18,18 @@ deploy:
 #    script: "./deploy.sh"
 #    on:
 #      branch: master
-  - provider: s3
-    access_key_id: "$ARTIFACTS_KEY"
-    secret_access_key: "$ARTIFACTS_SECRET"
-    bucket: "$ARTIFACTS_BUCKET"
-    region: "$ARTIFACTS_REGION"
-    skip_cleanup: true
-    local_dir: build
-    on:
-      branch: theme/nefertiti-setup
+   - provider: surge
+     project: ./build/
+     domain: nefertiti-chat.surge.sh
+     on:
+       all_branches: true
+     skip_cleanup: true
+#  - provider: s3
+#    access_key_id: "$ARTIFACTS_KEY"
+#    secret_access_key: "$ARTIFACTS_SECRET"
+#    bucket: "$ARTIFACTS_BUCKET"
+#    region: "$ARTIFACTS_REGION"
+#    skip_cleanup: true
+#    local_dir: build
+#    on:
+#      branch: theme/nefertiti-setup
