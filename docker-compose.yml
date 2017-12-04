@@ -8,6 +8,9 @@ services:
      - "3336:3000"
      volumes:
        - ".:/usr/src"
+   build:
+     <<: *client
+     entrypoint: npm run build
    front-dev:
      <<: *client
      entrypoint: npm run start
