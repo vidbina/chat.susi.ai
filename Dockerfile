@@ -1,14 +1,21 @@
-FROM node:9
+FROM node:boron-alpine
+MAINTAINER Mario Behling <mb@mariobehling.de>
 
-COPY . /usr/src
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-WORKDIR /usr/src
+# copy requirements
+COPY package.json /usr/src/app/
+COPY .eslintrc /usr/src/app/
+COPY .angular-cli.json /usr/src/app/
 
-EXPOSE 3000 5000
+# install requirements
+RUN npm install -g @angular/cli@latest
+RUN npm install
 
-RUN \
-  npm install && \
-  npm run build && \
-  npm install -g serve
+# Bundle app source
+COPY . /usr/src/app
 
-ENTRYPOINT serve -s build
+EXPOSE 4200
+
+CMD [ "ng", "serve" ]
