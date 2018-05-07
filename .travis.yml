@@ -9,15 +9,15 @@ cache:
   directories:
     - node_modules
 
-matrix:
-  include:
-    # Run npm tests and get code coverage matrix
-    - script:
-      - npm test
-      - bash <(curl -s https://codecov.io/bash)
+script:
+  - npm test
+  - bash <(curl -s https://codecov.io/bash)
+  - npm run build
 
-    # Deploy PR to surge
-    - script: bash ./surge_deploy.sh
-
-    # Deploy on non-prs
-    - script: bash ./deploy.sh
+deploy:
+   - provider: surge
+     project: ./build/
+     domain: nefertiti-chat.surge.sh
+     on:
+       all_branches: true
+     skip_cleanup: true
