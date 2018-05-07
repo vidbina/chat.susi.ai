@@ -15,6 +15,8 @@ class VoiceRecognition extends Component {
 
     if (SpeechRecognition != null) {
       this.recognition = this.createRecognition(SpeechRecognition)
+      console.log('SpeechRecognition');
+      console.log(this.recognition);
     } else {
       console.warn('The current browser does not support the SpeechRecognition API.');
     }
@@ -52,21 +54,32 @@ class VoiceRecognition extends Component {
     if(counter === 0 ){
       interimTranscript = undefined;
     }
+
+    console.log('interim');
+    console.log(interimTranscript);
+
+    console.log('final');
+    console.log(finalTranscript);
+
     this.props.onResult({interimTranscript,finalTranscript })
   }
   start = () => {
+    console.log('start recognition');
     this.recognition.start()
   }
 
   onspeechend = () => {
+    console.log('speech ended');
     this.recognition.stop()
   }
 
   stop = () => {
+    console.log('stop recognition');
     this.recognition.stop()
   }
 
   abort = () => {
+    console.log('abort');
     this.recognition.abort()
   }
 
@@ -84,15 +97,19 @@ class VoiceRecognition extends Component {
     ]
 
     events.forEach(event => {
+      console.log('event');
+      console.log(event);
       this.recognition.addEventListener(event.name, event.action)
     })
 
     this.recognition.addEventListener('result', this.bindResult)
 
+    console.log('START');
     this.start()
   }
 
   componentWillUnmount () {
+    console.log('unmounting');
     this.abort()
   }
 
